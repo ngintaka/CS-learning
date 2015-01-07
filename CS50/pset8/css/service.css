@@ -1,0 +1,121 @@
+/**
+ * service.css
+ *
+ * Computer Science 50
+ * Problem Set 8
+ *
+ * Global stylesheet.
+ */
+       
+html
+{
+    height: 100%;
+}
+
+body
+{
+    font-family: sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+#announcements
+{
+    font-size: smaller;
+    font-weight: bold;
+    font-style: italic;
+    margin: 20px;
+    text-align: center;
+}
+
+#chart
+{
+    background-color: #ffffff;
+    bottom: 320px;
+    border-bottom: 1px #cccccc solid;
+    border-top: 1px #cccccc solid;
+    box-shadow: inset 0 10px 10px -10px #999999, inset 0 -10px 10px -10px #999999;
+    font-size: smaller;
+    color: blue;
+    height: 250px;
+    overflow-y: scroll;
+    padding-top: 10px;
+    position: absolute;
+    width: 320px;
+}
+
+#controls
+{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#flight
+{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#earth
+{
+    border-right: 1px #cccccc solid;
+    height: 100%;
+    margin-right: 320px;
+}
+
+#score
+{
+    font-size: x-large;
+    color:red;
+    text-align: center;
+}
+
+#instructions
+{
+    font-size: smaller;
+    text-align: center;
+}
+
+#left
+{
+    float: right; 
+    height: 100%;
+    width: 100%
+}
+
+#logo
+{
+    margin-bottom: 10px;
+    font-size: x-large;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#chart_head
+{
+    margin-bottom: 10px;
+    font-size: x-large;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+#map
+{
+    bottom: 0;
+    height: 320px;
+    position: absolute;
+    width: 320px;
+}
+
+#right
+{
+    float: right;
+    height: 100%;
+    margin-right: -100%;
+    width: 320px;
+}

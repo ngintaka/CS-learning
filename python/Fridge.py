@@ -1,0 +1,2 @@
+class Fridge:
+    """Comment here"""

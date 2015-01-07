@@ -1,0 +1,11 @@
+0.  a: a lung disease caused by very fine particulate matter; b: generally acepted as the longest "English"vword
+1.  It returns resource usage stats.
+2.  16
+3.  Because we're calling a time function which will change during execution as time elapses.
+4.  Main reads in each character of the file and runs a set of tests: First it checks whether it is a letter of the alphabet or an apostrophe following one or more letters of the alphabet. If either of these tests are true, the character is appended to the variable 'word' - so each word builds a character at a time. If the length of the word being built exceeds the maximum allowable length (set by the LENGTH global variable) or contains numerals, the word is discarded (by setting the character index back to 0. If we come across any other character (eg white space, punctuation) we claim to have found a complete word and insert an end of string marker \0 to delineate the word. We update the word counter and start again at the next character looking for an alphabetical character.
+5.  As fscanf reads an entire string at a time, it could conceivably read a string that was overlength, or which included non-dictionary characters, eg accented characters or numerals.
+6.  Const is used to ensure that the program inputs are not accidently modified.
+7.  I built a hashtable, which was an array of node pointers. Each pointer in the array was initialized to NULL. As each dictionary entry was hashed, I checked if a node had already been assigned to the pointer at that hash value ( ie if node != 0). If this was the first node of the linked list to be added at that hash value, I simply assigned the node to the pointer and initialized the node's pointer (next) value to 0. If there were already one or more nodes at that hash value, any new node was prepended to the linked list (to save time) through the use of a temp node to remember the location of 'next'.    
+8.  Load was surprisingly fast (to me anyway) at < 0.5 secs. Check was slow as I hadn't optimized the hash function, but still < 0.8 secs, so not too bad. 
+9.  Modifying the hash function to get a broader spread across more hashes was the major improvement.
+10. It may be possible to malloc the entire required memory in one go, rather than node by node, to reduce the load time. For another time!

@@ -1,0 +1,27 @@
+def isValidWord(word, hand, wordList):
+    """
+    Returns True if word is in the wordList and is entirely
+    composed of letters in the hand. Otherwise, returns False.
+
+    Does not mutate hand or wordList.
+   
+    word: string
+    hand: dictionary (string -> int)
+    wordList: list of lowercase strings
+    """
+    copyHand = hand.copy()
+
+    if word not in wordList:
+        return False
+    else:
+        for l in word:
+            if l not in copyHand:
+                return False
+            else:    
+                copyHand[l] = copyHand[l]-1
+                for k, v in copyHand.items():
+                    if v == 0:
+                        del copyHand[k]
+    return True
+
+isValidWord('cat',{'a':1,'b':2,'c':2,'s':1,'t':1},['cat','bat','stab'])

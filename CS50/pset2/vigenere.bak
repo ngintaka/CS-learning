@@ -1,0 +1,73 @@
+#include <cs50.h>
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(int argc, string argv[])
+{
+    if (argc != 2)  //check for correct # of args
+    {
+        printf("Usage: ./vigenere <keyword>\n");
+        return 1;
+    }
+    string k = argv[1];
+    
+    for (int c = 0; c < strlen(k); c++)
+    {
+        if (!isalpha(k[c]))
+        {
+        printf("Usage: ./vigenere <keyword>\n");
+        return 1;
+        }
+    }
+    //printf("input plaintext: ");
+    string p = GetString();
+
+//encode both upper & lower case letters but not punctuation
+//manage upper & lower case key characters identically
+//reuse keyword if shorter than plaintext
+
+    int l = strlen(k); //use modulo of key length to recycle key characters
+    for (int i = 0, j = 0; i < strlen(p); i++)
+    {
+        if (p[i] >= 'a' && p[i] <= 'z') //if plaintext is lower
+        {
+            if (k[j%l] >= 'a' && p[i] <= 'z') //if key is lower
+            {
+                printf("%c", ('a' + (p[i]- 'a' + (k[j%l])- 'a')%26));
+                j++;
+            }
+            else 
+            {
+                printf("%c", ('a' + (p[i]- 'a' + (k[j%l])- 'A')%26)); //if key is upper
+                j++;
+            }
+            
+        }
+        
+        
+        else if (p[i] >= 'A' && p[i] <= 'Z')   //if plaintext is upper
+        {
+            if (k[j%l] >= 'a' && p[i] <= 'z')
+            {
+                printf("%c", ('A' + (p[i] - 'A' + k[j%l]- 'a')%26)); //if key is lower
+                j++;        
+            }
+            else
+            {
+                printf("%c", ('A' + (p[i] - 'A' + k[j%l]- 'A')%26)); //if key is upper
+                j++;
+            
+            }
+        }
+        
+        else   
+        {
+           printf("%c", p[i]); 
+        }    
+    }
+    printf("\n");
+    return 0;
+}
+  

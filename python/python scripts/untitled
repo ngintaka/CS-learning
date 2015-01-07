@@ -1,0 +1,20 @@
+def isIn(char, aStr):
+    
+    pos = len(aStr)/2
+    guess = aStr[pos]
+    #print pos, guess
+
+    if guess == char:
+        return True
+
+    elif len(aStr) <= 1:
+        return False
+
+    elif guess > char:
+        isIn(char, aStr[:(pos)])
+
+    elif guess < char:
+        isIn(char, aStr[pos+1:])
+    print pos, guess, aStr
+    return False
+    

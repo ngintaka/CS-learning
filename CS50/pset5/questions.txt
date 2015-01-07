@@ -1,0 +1,19 @@
+0.  BMP: up to 2^24; GIF: 2^8; JPEG: up to 2^24; PNG: up to 2^48
+1.  GIF; animated PNG
+2.  Lossless compression enables exact reproduction of original file; lossy jettisons some information during compression that cannot later be retrieved.
+3.  JPEG
+4.  The first character of the filename is overwritten with a special character, and the file allocation table is updated to show the file's clusters as being free for reuse. The file data remains intact on the disk until overwritten by another file. 
+5.  Best practice is to physically destroy the disk media; next best is to overwrite the disk multiple times with junk data.
+6. <stdint.h> is a C header file that defines a standard set of integer types of specific widths.
+7.  To ensure that an appropriate amount of memory is allocated for each variable, ie enough to hold the data but without unnecessarily wasting space. And to define how each data type is constructed (eg if a bit is allocated to signing) that the data is interpreted correctly.
+8.  BYTE = 1 byte; DWORD = 4 bytes; LONG = 4 bytes; WORD = 2 bytes.
+9.  42 4D; BM; 01000010 01001101
+10. bfSize indicates the size of the bitmap file in bytes; biSize indicates the number of bytes required by the BITMAPINFOHEADER itself.
+11. A negative biHeight indicates that the BMP is stored as a top-down manner with it's origin at the top left corner.
+12. bitCount
+13. File may not exist, or incorrect filename or path in call, or insufficient permissions etc.
+14. We are reading in 1 unit of data at a time. 
+15. 3
+16. Moves the position indicator to a new position in the file, determined by value of padding variable (in our instance). The new position is incremented from the current position by the value of padding. 
+17. The current position being read (or written to) in an open file.
+18. Milo Banana dun it

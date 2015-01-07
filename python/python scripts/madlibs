@@ -1,0 +1,4 @@
+name = raw_input("What's your name? ")
+animal = raw_input("What's your favorite animal? ")
+adjective = raw_input("How do you feel today? ")
+print name, "loves", adjective, animal

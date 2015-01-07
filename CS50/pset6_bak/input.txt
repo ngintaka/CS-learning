@@ -1,0 +1,10 @@
+cat
+caterpillar
+dog
+horse
+cow
+truck
+house
+car
+shop
+milk

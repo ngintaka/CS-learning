@@ -1,0 +1,16 @@
+#def listCreate(start,stop,step):
+#    L = [start]
+#    l = start
+#    while l < (stop-step):
+#        l = l +step
+#        L.append(l)
+#    L.append(stop)
+#    return L
+
+def radiationExposure(start, stop, step):
+    total = 0
+    for y in L:
+        rad = f(y)
+        #print y,rad 
+        total = total + rad
+    return total
